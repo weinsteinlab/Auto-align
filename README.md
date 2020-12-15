@@ -1,5 +1,5 @@
 # Auto-align
-Python implementation of code to align protein by weighting the most stable residues higher than more flexible ones.
+Fast Python implementation of code to align protein by weighting the most stable residues higher than more flexible ones.
 
 ## Requirements
 Requires python environment with numpy and MDanalysis. It is easy to make you own using conda, but you can also use this one:

@@ -14,4 +14,4 @@ This scheme does not work well for systems in which there is global shifting of 
  ## Usage
  Commmand line:
 
-align.py $input.psf $input.dcd $aligned.dcd
+python align.py $input.psf $input.dcd $aligned.dcd

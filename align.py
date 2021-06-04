@@ -10,9 +10,6 @@ out_dcd = str(sys.argv[3])
 mobile = mda.Universe(psf, dcd)
 ref = mda.Universe(psf, dcd)
 
-mobile.trajectory[-1]  # set mobile trajectory to last frame
-ref.trajectory[0]  # set reference trajectory to first frame
-
 # Do the first alignment with no weights
 aligner = align.AlignTraj(mobile, ref, select='name CA', in_memory=True).run()
 
@@ -46,9 +43,6 @@ stds = np.asarray(stds)
 
 mobile = mda.Universe(psf, dcd)
 ref = mda.Universe(psf, dcd)
-
-mobile.trajectory[-1]  # set mobile trajectory to last frame
-ref.trajectory[3000]  # set reference trajectory to first frame
 
 # Align using the inverse of the standard deviation as weights
 aligner = align.AlignTraj(mobile, ref, select='name CA', weights=(1/stds), filename=out_dcd).run()

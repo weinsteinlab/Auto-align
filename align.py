@@ -51,4 +51,4 @@ mobile.trajectory[-1]  # set mobile trajectory to last frame
 ref.trajectory[3000]  # set reference trajectory to first frame
 
 # Align using the inverse of the standard deviation as weights
-aligner = align.AlignTraj(mobile, ref, select='name CA', weights=(1/stds), filename=out_dcd).run()
+aligner = align.AlignTraj(mobile, ref, select='name CA', weights=(1/stds**2), filename=out_dcd).run() # increase power to make sharper, decrease to make flatter
